@@ -1,23 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import BtnJoin from '../BtnJoin/BtnJoin';
 
-import {Wrapper, Body, Paragraph, Text} from './PastMeetupCard.style';
+import { PastMeetupCardBg, PastMeetupDesc, Went } from "./PastMeetupCard.style";
+
+// import './PastMeetupCard.css';
 
 const PastMeetupCard = ({data}) => {
     return (
                 <>
+                
                     {
                         data.map((item) => (
-                            <Wrapper>
-                                 <Body> 
+                            <PastMeetupCardBg>
+                                <PastMeetupDesc>
                                     <b>{item.date}</b>
                                     <hr></hr>
-                                    <Paragraph>{item.event_desc}</Paragraph>
-                                    <Paragraph>{item.attendees} &nbsp;<Text>went</Text></Paragraph>
+                                    <p>{item.event_desc}</p>
+                                    <p>{item.attendees} &nbsp;<Went>went</Went></p>
                                     <BtnJoin primary="primary" text="View" ></BtnJoin>
-                                 </Body> 
-                            </Wrapper>
+                                </PastMeetupDesc>
+                            </PastMeetupCardBg>
                         ))
                     }
                 
@@ -25,11 +29,10 @@ const PastMeetupCard = ({data}) => {
     );
 }
 
-
 PastMeetupCard.propTypes = {
-    date: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired, 
     event_desc : PropTypes.string.isRequired, 
-    attendees : PropTypes.number.isRequired, 
+    attendees : PropTypes.number.isRequired,
   };
 
 export default PastMeetupCard;
