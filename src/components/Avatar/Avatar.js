@@ -2,16 +2,17 @@ import React from 'react'
 
 import avatar from '../../Assets/avatar.png';
 
-import './Avatar.css';
+import {AvatarPhoto} from './Avatar.style';
+
 
 const Avatar = () => {
     return (
-        <div>
-            <img src={avatar}
-                alt="Avatar"
-                className="avatar" 
+        // <div>
+            <AvatarPhoto src={avatar}
+                alt="Avatar" 
             />
-        </div>
+            // </AvatarPhoto>
+        // </div>
     );
 }
 

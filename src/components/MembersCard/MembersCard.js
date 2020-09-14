@@ -1,19 +1,17 @@
 import React from 'react';
-
 import Avatar from '../Avatar/Avatar';
 
-import './MembersCard.css';
+import {Wrapper, Body, Heading, Paragraph} from './MemberCard.style';
 
 const MembersCard = () => {
     return (
-        <div className="MembersCard">
+        <Wrapper>
             <Avatar/>
-            <div className="MembersDesc">
-                <h2>Organizers</h2>
-                <p>Adhi Wiranata    4 others</p>
-            </div>
-            
-        </div>
+            <Body>
+                <Heading>Organizers</Heading>
+                <Paragraph>Adhi Wiranata    4 others</Paragraph>
+            </Body>
+        </Wrapper>
     );
 }
 

@@ -1,25 +1,28 @@
 import React from 'react';
-
 import Avatar from '../Avatar/Avatar';
 import BtnJoin from '../BtnJoin/BtnJoin';
 
 
-import './MeetupCard.css';
+import { Wrapper, Body, Heading, Paragraph} from './MeetupCard.style';
 
 const MeetupCard = () => {
     return (
-        <div className="MeetupCard">
+        <Wrapper>
             <Avatar/>
-            <div className="MeetupDesc">
-                <h1>Hacktiv8 Meetup</h1>
-                <p>Location : Jakarta , Indonesia</p>
-                <p>Members : 1078</p>
-                <p>Organizer : Adhy Wiranata</p>
-                <BtnJoin text="Join Us!"></BtnJoin>
-            </div>
+            <Body>
+                <Heading>Hacktiv8 Meetup</Heading>
+                <Paragraph> Location : Jakarta , Indonesia </Paragraph>
+                <Paragraph> Members : 1078 </Paragraph>
+                <Paragraph> Organizer : Adhy Wiranata</Paragraph>
+                <BtnJoin primary="primary" text="Join Us!"></BtnJoin> &nbsp;&nbsp;
+                <BtnJoin text="Sign Up"></BtnJoin>
+            </Body>
             
-        </div>
+        </Wrapper>
     );
 }
 
 export default MeetupCard;
+
+
+

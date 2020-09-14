@@ -1,14 +1,14 @@
 import React from 'react';
 
-import './NextMeetupCard.css';
+import { Wrapper, Text, Paragraph } from './NextMeetupCard.style';
 
 const NextMeetupCard = () => {
     return (
-        <div className="bg-card">
+        <Wrapper>
             <b>Awesome Meetup and event</b><br />
-            <text className="date">25 January 2019</text>
+            <Text>25 January 2019</Text>
             <br></br>
-            <p>
+            <Paragraph>
                Hello, Javascript & Node.js Ninjas!<br></br>
                Get ready for our monthly meetup JakartaJS! This will be our fifth meetup of 2018!<br></br>
                The meetup format will contain some sort of stories and technical talks.<br></br>
@@ -19,8 +19,8 @@ const NextMeetupCard = () => {
                See you there!<br></br>
                Best, Hengki, Giovanni, Sofian, Riza, Agung The JakartaJS Organizers.
                
-            </p>
-        </div>
+            </Paragraph>
+        </Wrapper>
     );
 }
 

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import './BtnJoin.css';
+import {Button} from './BtnJoin.style';
 
 const BtnJoin = (props) => {
     return (
-        <button className="primary">{props.text}</button>
+        <Button primary={props.primary}>{props.text}</Button>
     );
 }
 

@@ -1,23 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import BtnJoin from '../BtnJoin/BtnJoin';
 
-import './PastMeetupCard.css';
+import {Wrapper, Body, Paragraph, Text} from './PastMeetupCard.style';
 
-const PastMeetupCard = ({date, event_desc, attendees}) => {
+const PastMeetupCard = ({data}) => {
     return (
-        <div className="PastMeetupCard">
-            <div className="PastMeetupDesc">
-                <b>{date}</b>
-                <hr></hr>
-                <p>{event_desc}</p>
-                <p>{attendees} &nbsp;<text className="went">went</text></p>
-                <BtnJoin text="View" ></BtnJoin>
-            </div>
-        </div>
+                <>
+                    {
+                        data.map((item) => (
+                            <Wrapper>
+                                 <Body> 
+                                    <b>{item.date}</b>
+                                    <hr></hr>
+                                    <Paragraph>{item.event_desc}</Paragraph>
+                                    <Paragraph>{item.attendees} &nbsp;<Text>went</Text></Paragraph>
+                                    <BtnJoin primary="primary" text="View" ></BtnJoin>
+                                 </Body> 
+                            </Wrapper>
+                        ))
+                    }
+                
+                </>
     );
 }
+
 
 PastMeetupCard.propTypes = {
     date: PropTypes.string.isRequired,

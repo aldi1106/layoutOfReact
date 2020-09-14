@@ -1,17 +1,20 @@
 import React from 'react';
 
-import './Navbar.css';
+// import './Navbar.css';
+
+import {HeaderLink, LinkActive, Link, LinkRight} from './Navbar.style';
 
 const Navbar = () => {
     return (
-        <div className="topnav">
-            <a className="active" href="#home"><b>Qtemu</b></a>
-            <a href="#create">Create Meetup</a>
-            <a href="#explore">Explore</a>
-            <div className="topnav-right">
-                <a href="#login">Login</a>
-            </div>
-            </div>
+        <HeaderLink>
+            <LinkActive href="#qtemu"><b>Qtemu</b></LinkActive>
+            <Link href="#CreateMeetup">Create Meetup</Link>
+            <Link href="#Explore">Explore</Link>
+         
+            <LinkRight>
+                <Link href="#Login">Login</Link>
+            </LinkRight>
+            </HeaderLink>
     );
 }
 
