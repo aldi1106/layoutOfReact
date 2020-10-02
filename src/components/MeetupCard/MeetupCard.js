@@ -5,15 +5,15 @@ import BtnJoin from '../BtnJoin/BtnJoin';
 
 import { Wrapper, Body, Heading, Paragraph} from './MeetupCard.style';
 
-const MeetupCard = () => {
+const MeetupCard = ({ location , members, organizer}) => {
     return (
         <Wrapper>
             <Avatar/>
-            <Body>
-                <Heading>Hacktiv8 Meetup</Heading>
-                <Paragraph> Location : Jakarta , Indonesia </Paragraph>
-                <Paragraph> Members : 1078 </Paragraph>
-                <Paragraph> Organizer : Adhy Wiranata</Paragraph>
+            <Body>    
+                <Heading><h1>Hacktiv8 Meetup</h1></Heading>
+                <p id="location">location : {location}</p>
+                <p id="members">Members : {members}</p>
+                <p id="organizer">Organizer : {organizer}</p>
                 <BtnJoin primary="primary" text="Join Us!"></BtnJoin> &nbsp;&nbsp;
                 <BtnJoin text="Sign Up"></BtnJoin>
             </Body>

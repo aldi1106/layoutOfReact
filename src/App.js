@@ -36,7 +36,7 @@ function App() {
       <Navbar/>
       <div className="container-fluid">
         
-        <MeetupCard />
+      <MeetupCard title="Hacktiv8 Meetup" location="Jakarta, Indonesia" members = "1023" organizer = "Adhi Wiranata" />
         <br></br>
         <h3 className="whitecolor">Next Meetup</h3>
         <NextMeetupCard />
