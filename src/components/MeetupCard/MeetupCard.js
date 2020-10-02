@@ -3,7 +3,7 @@ import Avatar from '../Avatar/Avatar';
 import BtnJoin from '../BtnJoin/BtnJoin';
 
 
-import { Wrapper, Body, Heading, Paragraph} from './MeetupCard.style';
+import { Wrapper, Body, Heading} from './MeetupCard.style';
 
 const MeetupCard = ({ location , members, organizer}) => {
     return (
